@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\RepositoryController as RepositoryControllerAlias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::group(['prefix' => 'v1', 'namespace' => 'Api\\V1'], function () {
-    Route::group(['prefix' => 'repositories'], function () {
-        Route::get('index', 'RepositoryController@index');
-    });
+        Route::get('repositories/index', [RepositoryControllerAlias::class,'index']);
+        Route::get('get-stared-repositories/{username}', [RepositoryControllerAlias::class,'get_stared_repositories']);
+        
 });
