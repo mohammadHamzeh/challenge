@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Filter\Contracts\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Repository extends Model
 {
-    use HasFactory;
+    use HasFactory, Filterable;
 
     protected $fillable = [
         "repository_id",
