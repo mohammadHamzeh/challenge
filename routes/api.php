@@ -17,5 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'v1', 'namespace' => 'Api\\V1'], function () {
         Route::get('repositories/index', [RepositoryControllerAlias::class,'index']);
         Route::get('get-stared-repositories/{username}', [RepositoryControllerAlias::class,'get_stared_repositories']);
-        
+
+        Route::post('store_tag_repository',[\App\Http\Controllers\Api\V1\TagController::class,'store_tag_repository']);
 });
