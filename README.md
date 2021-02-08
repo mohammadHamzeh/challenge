@@ -1,13 +1,13 @@
 ## Github-challenge
 
-##Install
-`$ git clone `
+## Install
+`$ git clone https://github.com/mohammadHamzeh/challenge.git `
 
 Via Composer
 
 `$ composer install`
 
-##How to use
+## How to use
 1-To receive packages starred by the user, send the username to the following path
 
 `api/v1/get-stared-repositories/{username}`
