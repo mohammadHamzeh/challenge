@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class RepositoryFilter extends QueryFilter
 {
-    public function tags($value)
+    public function tag($value)
     {
         return $this->builder->whereHas('tags', function (Builder $query) use ($value) {
             $query->where('slug', 'like', $value);
