@@ -17,4 +17,9 @@ class Repository extends Model
         "url",
         "language",
     ];
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
