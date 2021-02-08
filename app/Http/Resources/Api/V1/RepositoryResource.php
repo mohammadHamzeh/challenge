@@ -15,12 +15,12 @@ class RepositoryResource extends JsonResource
     public function toArray($request)
     {
         return [
-            "id",
-            "repository_id",
-            "repository_name",
-            "description",
-            "url",
-            "language",
+            "id"=>$this->id,
+            "repository_id"=>$this->repository_id,
+            "repository_name"=>$this->repository_name,
+            "description"=>$this->description,
+            "url"=>$this->url,
+            "language"=>$this->language,
         ];
     }
 }
