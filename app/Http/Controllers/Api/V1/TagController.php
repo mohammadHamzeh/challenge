@@ -27,7 +27,7 @@ class TagController extends ApiController
             /*store tags in pivot table repository_tag*/
             $this->store_tags_for_repository($tags, $request->repository_id);
             DB::commit();
-            return $this->respondSuccessWithMessage('با موفقیت ذخیره شد ');
+            return $this->respondSuccessWithMessage('Created successfully');
         } catch (\Exception $e) {
             DB::rollBack();
             return $this->respondWithErrorMessage($e->getMessage());
